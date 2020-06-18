@@ -6,11 +6,12 @@ Esse projeto foi criado utilizando a versão 1.17.3 do Flutter.
 
 A foco do projeto seria construir um layout mais identico possível com o modelo apresentado anteriormente.
 
-
-
-Inicie o projeto:
+### Inicie o projeto:
 ```
 flutter run
 ```
 
-# my_wallet
+### Modelo levado em consideração para o projeto:
+
+![alt text](./carteira.png)
+
