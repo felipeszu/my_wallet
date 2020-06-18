@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:my_wallet/model/chart_data.dart';
+import 'package:my_wallet/model/timeline_serie.dart';
 import 'package:my_wallet/utils/colors.dart';
 
 
@@ -91,12 +92,4 @@ class TimeLineChart extends StatelessWidget {
     });
     return chartList;
   }
-}
-
-class TimeSeries {
-  final String name;
-  final DateTime time;
-  final double value;
-
-  TimeSeries(this.time, this.value, this.name);
 }
