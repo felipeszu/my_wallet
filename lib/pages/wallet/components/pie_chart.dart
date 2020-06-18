@@ -11,6 +11,8 @@ class PieChart extends StatefulWidget {
 }
 
 class _PieChartState extends State<PieChart> {
+  bool showValue = true;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -50,16 +52,23 @@ class _PieChartState extends State<PieChart> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Text(
-                'Exibir Valor',
-                style: TextStyle(
-                  color: Colors.grey[600],
-                  fontSize: 16,
-                  decoration: TextDecoration.underline,
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    showValue = !showValue;
+                  });
+                },
+                child: Text(
+                  'Exibir Valor',
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontSize: 16,
+                    decoration: TextDecoration.underline,
+                  ),
                 ),
               ),
               Text(
-                'R\$  ${"• • • • •"}',
+                showValue ? 'R\$ • • • • •' : 'R\$ 15.000,00',
                 style:
                     TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
